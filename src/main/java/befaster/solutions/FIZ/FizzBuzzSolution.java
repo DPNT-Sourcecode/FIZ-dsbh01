@@ -3,11 +3,15 @@ package befaster.solutions.FIZ;
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
-    	if(isBoth(number)) {return "fizz buzz";}
+    	String res;
+    	if(isBoth(number)) {res = "fizz buzz";}
         String res = isThree(number) ? "fizz" : number.toString();
         return isFive(number) ? "buzz" : res;
     }
 
+    public Boolean isDeluxe(Integer number) {
+    	
+    }
     public Boolean isBoth(Integer number) {
     	return isThree(number) && isFive(number);
     }
@@ -27,6 +31,7 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
 
