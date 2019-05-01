@@ -21,7 +21,16 @@ public class FizzBuzzSolution {
     	}
     }
     public Boolean notIdentical(Integer number) {
-    	
+    	Integer c = number % 10;
+    	number /= 10;
+    	while(number != 0) {
+    		if(c != number % 10) {
+    			return false;
+    		}
+    		c = number % 10;
+    		number /= 10;
+    	}
+    	return true;
     }
     public Boolean isBoth(Integer number) {
     	return isThree(number) && isFive(number);
@@ -42,8 +51,3 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
-
-
-
-
-
