@@ -71,7 +71,3 @@ public class SendCommandToServer {
     }
 
 }
-
-
-
-
