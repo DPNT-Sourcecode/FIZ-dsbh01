@@ -14,19 +14,25 @@ public class FizzBuzzSolution {
     	}else {
     		res = "fizz buzz";
     	}
-    	if(res.equals("")) {
-    		res = notIdentical(number) ? number.toString() : "deluxe";
+    	if(isDeluxe(number)) {
+    		if(res == "") {
+    			res = "deluxe";
+    		}else {
+    			res = res + " deluxe";
+    		}
     	}else {
-    	    res += " " + addDeluxe(number);
+    		if(res == "") {
+    			res = number.toString();
+    		}
     	}
     	return res;
     }
 
-    public String addDeluxe(Integer number) {
+    public Boolean isDeluxe(Integer number) {
     	if(number <= 10 || notIdentical(number)) {
-    		return "";
+    		return false;
     	}else {
-    		return "deluxe";
+    		return true;
     	}
     }
     public Boolean notIdentical(Integer number) {
@@ -60,6 +66,7 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
 
