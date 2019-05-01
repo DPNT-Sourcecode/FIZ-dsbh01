@@ -5,8 +5,12 @@ public class FizzBuzzSolution {
     public String fizzBuzz(Integer number) {
     	String res = "";
     	if(isBoth(number) == false) {
-	        res = isThree(number) ? "fizz" : res;
-	        res = isFive(number) ? "buzz" : res;
+	       if(isThree(number)) {
+	    	   res = "fizz";
+	       }
+	       if(isFive(number)) {
+	    	   res = "buzz";
+	       }
     	}else {
     		res = "fizz buzz";
     	}
@@ -56,6 +60,7 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
 
