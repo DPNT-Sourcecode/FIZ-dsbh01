@@ -9,13 +9,22 @@ public class FizzBuzzSolution {
     }
 
     public Boolean isBoth(Integer number) {
-    	return true;
+    	return isThree(number) && isFive(number);
     }
     public Boolean isThree(Integer number) {
-    	return true;
+    	return number % 3 == 0 || contains(number, 3);
     }
     public Boolean isFive(Integer number) {
-    	return true;
+    	return number % 5 == 0 || contains(number, 5);
+    }
+    public Boolean contains(Integer number, Integer value) {
+    	while(number != 0) {
+    		if(number % 10 == value) {
+    			return true;
+    		}
+    	}
+    	return false;
     }
 }
+
 
