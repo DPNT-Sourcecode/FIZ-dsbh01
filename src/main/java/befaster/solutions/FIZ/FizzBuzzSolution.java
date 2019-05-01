@@ -16,7 +16,7 @@ public class FizzBuzzSolution {
     	}
     	if(isDeluxe(number)) {
     		if(res == "") {
-    			res = "deluxe";
+    			res = isFaceDeluxe(number) ? "fake deluxe" : "deluxe";
     		}else {
     			res = res + " deluxe";
     		}
@@ -66,3 +66,4 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
