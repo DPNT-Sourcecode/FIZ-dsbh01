@@ -40,10 +40,10 @@ public class FizzBuzzSolution {
     	}
     }
     public Boolean isThreeDeluxe(Integer number) {
-    	return number % 3 == 0 && contains(number, 3);
+    	return (number % 3 == 0) && contains(number, 3);
     }
     public Boolean isFiveDeluxe(Integer number) {
-    	return number % 5 == 0 && contains(number, 5);
+    	return (number % 5 == 0) && contains(number, 5);
     }
     public Boolean notIdentical(Integer number) {
     	Integer c = number % 10;
@@ -76,6 +76,7 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
 
