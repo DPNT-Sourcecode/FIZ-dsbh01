@@ -4,12 +4,23 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
     	String res;
-    	if(isBoth(number)) {res = "fizz buzz";}
-        String res = isThree(number) ? "fizz" : number.toString();
-        return isFive(number) ? "buzz" : res;
+    	if(isBoth(number) == false) {
+	        res = isThree(number) ? "fizz" : number.toString();
+	        res = isFive(number) ? "buzz" : res;
+    	}else {
+    		res = "fizz buzz";
+    	}
+    	return res + addDeluxe(number);
     }
 
-    public Boolean isDeluxe(Integer number) {
+    public String addDeluxe(Integer number) {
+    	if(number <= 10 || notIdentical(number)) {
+    		return "";
+    	}else {
+    		return "deluxe";
+    	}
+    }
+    public Boolean notIdentical(Integer number) {
     	
     }
     public Boolean isBoth(Integer number) {
@@ -31,6 +42,7 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
 
