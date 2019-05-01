@@ -34,9 +34,9 @@ public class FizzBuzzSolution {
     
     public Boolean isDeluxe(Integer number) {
     	if(isThreeDeluxe(number) || isFiveDeluxe(number)) {
-    		return false;
-    	}else {
     		return true;
+    	}else {
+    		return false;
     	}
     }
     public Boolean isThreeDeluxe(Integer number) {
@@ -76,6 +76,7 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
 
