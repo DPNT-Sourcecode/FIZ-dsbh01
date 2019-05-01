@@ -54,7 +54,7 @@ public class SendCommandToServer {
         
         System.out.println(entry.fizzBuzz("122") + "\n" + 
         entry.fizzBuzz("311") + "\n" + entry.fizzBuzz("511") + "\n" +
-        		entry.fizzBuzz("325"));
+        		entry.fizzBuzz("522"));
         
         QueueBasedImplementationRunner runner = new QueueBasedImplementationRunner.Builder()
                 .setConfig(getRunnerConfig())
@@ -71,4 +71,5 @@ public class SendCommandToServer {
     }
 
 }
+
 

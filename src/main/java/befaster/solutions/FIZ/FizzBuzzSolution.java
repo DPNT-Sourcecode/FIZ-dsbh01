@@ -22,9 +22,11 @@ public class FizzBuzzSolution {
     		if(number % 10 == value) {
     			return true;
     		}
+    		number /= 10;
     	}
     	return false;
     }
 }
+
 
 
