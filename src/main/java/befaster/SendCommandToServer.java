@@ -52,7 +52,7 @@ public class SendCommandToServer {
     public static void main(String[] args) throws ConfigNotFoundException {
         EntryPointMapping entry = new EntryPointMapping();
         
-        System.out.println(entry.fizzBuzz("1") + "\n" + 
+        System.out.println(entry.fizzBuzz("12") + "\n" + 
         entry.fizzBuzz("311") + "\n" + entry.fizzBuzz("511") + "\n" +
         		entry.fizzBuzz("522") + "\n" + entry.fizzBuzz("5555"));
         
@@ -71,5 +71,6 @@ public class SendCommandToServer {
     }
 
 }
+
 
 

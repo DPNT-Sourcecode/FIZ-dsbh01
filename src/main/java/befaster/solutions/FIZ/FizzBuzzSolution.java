@@ -3,22 +3,26 @@ package befaster.solutions.FIZ;
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
-    	String res;
+    	String res = "";
     	if(isBoth(number) == false) {
-	        res = isThree(number) ? "fizz" : number.toString();
+	        res = isThree(number) ? "fizz" : res;
 	        res = isFive(number) ? "buzz" : res;
     	}else {
     		res = "fizz buzz";
     	}
-    	
-    	return res + " " + isDeluxe(number);
+    	if(res.equals("")) {
+    		res = notIdentical(number) ? number.toString() : "deluxe";
+    	}else {
+    	    res += " " + addDeluxe(number);
+    	}
+    	return res;
     }
 
-    public Boolean isDeluxe(Integer number) {
+    public String addDeluxe(Integer number) {
     	if(number <= 10 || notIdentical(number)) {
-    		return false;
+    		return "";
     	}else {
-    		return true;
+    		return "deluxe";
     	}
     }
     public Boolean notIdentical(Integer number) {
@@ -52,5 +56,6 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
 
