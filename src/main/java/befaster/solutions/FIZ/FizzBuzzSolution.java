@@ -10,14 +10,15 @@ public class FizzBuzzSolution {
     	}else {
     		res = "fizz buzz";
     	}
-    	return res + addDeluxe(number);
+    	
+    	return res + " " + isDeluxe(number);
     }
 
-    public String addDeluxe(Integer number) {
+    public Boolean isDeluxe(Integer number) {
     	if(number <= 10 || notIdentical(number)) {
-    		return "";
+    		return false;
     	}else {
-    		return " deluxe";
+    		return true;
     	}
     }
     public Boolean notIdentical(Integer number) {
@@ -51,4 +52,5 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
