@@ -16,9 +16,9 @@ public class FizzBuzzSolution {
     	}
     	if(isDeluxe(number)) {
     		if(res == "") {
-    			res = isFaceDeluxe(number) ? "fake deluxe" : "deluxe";
+    			res = isOdd(number) ? "fake deluxe" : "deluxe";
     		}else {
-    			res = res + " deluxe";
+    			res = isOdd(number) ? res + " fake deluxe" : res + " deluxe";
     		}
     	}else {
     		if(res == "") {
@@ -28,6 +28,10 @@ public class FizzBuzzSolution {
     	return res;
     }
 
+    public Boolean isOdd(Integer number) {
+    	return number % 2 != 0;
+    }
+    
     public Boolean isDeluxe(Integer number) {
     	if(number <= 10 || notIdentical(number)) {
     		return false;
@@ -66,4 +70,5 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
 
