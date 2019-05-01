@@ -52,6 +52,10 @@ public class SendCommandToServer {
     public static void main(String[] args) throws ConfigNotFoundException {
         EntryPointMapping entry = new EntryPointMapping();
         
+        System.out.println(entry.fizzBuzz("1") + "\n" + 
+        entry.fizzBuzz("3") + "\n" + entry.fizzBuzz("5") + "\n" +
+        		entry.fizzBuzz("15"));
+        
         QueueBasedImplementationRunner runner = new QueueBasedImplementationRunner.Builder()
                 .setConfig(getRunnerConfig())
                 .withSolutionFor("sum", entry::sum)
@@ -67,3 +71,4 @@ public class SendCommandToServer {
     }
 
 }
+
