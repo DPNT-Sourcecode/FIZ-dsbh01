@@ -17,7 +17,7 @@ public class FizzBuzzSolution {
     	if(number <= 10 || notIdentical(number)) {
     		return "";
     	}else {
-    		return "deluxe";
+    		return " deluxe";
     	}
     }
     public Boolean notIdentical(Integer number) {
@@ -25,12 +25,12 @@ public class FizzBuzzSolution {
     	number /= 10;
     	while(number != 0) {
     		if(c != number % 10) {
-    			return false;
+    			return true;
     		}
     		c = number % 10;
     		number /= 10;
     	}
-    	return true;
+    	return false;
     }
     public Boolean isBoth(Integer number) {
     	return isThree(number) && isFive(number);
@@ -51,3 +51,4 @@ public class FizzBuzzSolution {
     	return false;
     }
 }
+
